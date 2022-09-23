@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using Genericlist;
+
 namespace GenerischeKlassen
 {
     class Program
@@ -16,6 +18,17 @@ namespace GenerischeKlassen
 
             Console.WriteLine(summe);
             Console.WriteLine(itemStore.Value2);
+
+
+
+
+            CustomStack<int> myStack = new CustomStack<int>();
+            myStack.push(1);
+            myStack.push(2);
+            myStack.push(3);
+            myStack.push(4);
+
+            Console.Write(myStack);
 
         }
     }
