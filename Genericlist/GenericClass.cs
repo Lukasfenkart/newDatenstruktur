@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Genericlist
 {
-    internal class Class1
+    internal class GenericClass
     {
     }
 }
