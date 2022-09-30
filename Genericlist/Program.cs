@@ -21,7 +21,6 @@ namespace GenerischeKlassen
 
 
 
-
             CustomStack<int> myStack = new CustomStack<int>();
             myStack.push(1);
             myStack.push(2);

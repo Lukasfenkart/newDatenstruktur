@@ -22,8 +22,10 @@ namespace Genericlist
 
         public int size()
         {
-
             return list.Count;  
         }
     }
+    
+
+
 }

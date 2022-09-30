@@ -1,4 +1,5 @@
 using Genericlist;
+using LinkedList;
 using NUnit.Framework;
 
 namespace TestProject1
@@ -23,6 +24,17 @@ namespace TestProject1
             myStack.pop();
             Assert.AreEqual(3, myStack.size());
 
+            
+
+        }
+        [Test]
+        public void Test2()
+        {
+            LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
+            linkedList.add(new Node(1));
+            linkedList.add(new Node(2));
+            linkedList.add(new Node(3));
+            Assert.AreEqual(3, linkedList.size());
         }
     }
 }

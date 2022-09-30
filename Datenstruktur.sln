@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genericlist", "Genericlist\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{0A939C95-F797-40AB-8061-2696E8F605F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "ConsoleApp1\LinkedList.csproj", "{762BA0FB-EB63-4503-BF8A-9F619081CA0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0A939C95-F797-40AB-8061-2696E8F605F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A939C95-F797-40AB-8061-2696E8F605F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A939C95-F797-40AB-8061-2696E8F605F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{762BA0FB-EB63-4503-BF8A-9F619081CA0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{762BA0FB-EB63-4503-BF8A-9F619081CA0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{762BA0FB-EB63-4503-BF8A-9F619081CA0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{762BA0FB-EB63-4503-BF8A-9F619081CA0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
