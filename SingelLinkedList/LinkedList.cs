@@ -26,7 +26,7 @@ namespace LinkedList
             }
             count++;
         }
-        public void delet()
+        public void delete()
         {
 
         }

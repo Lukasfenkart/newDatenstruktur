@@ -11,13 +11,14 @@ namespace TestProject1
         }
 
         [Test]
-        public void Test2()
+        public void Test()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
             linkedList.add(new Node(1));
             linkedList.add(new Node(2));
             linkedList.add(new Node(3));
-            Assert.AreEqual(3, linkedList.size());
+            linkedList.add(new Node(4));
+            Assert.AreEqual(4, linkedList.size());
         }
     }
 }
