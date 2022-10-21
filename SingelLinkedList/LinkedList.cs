@@ -42,6 +42,7 @@ namespace LinkedList
                 currentNode = currentNode?.next;
             }
             currentNode.next = new Node(newNode, currentNode.next);
+            count++;
         }
         public void deletelast()
         {

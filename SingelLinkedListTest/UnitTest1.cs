@@ -61,7 +61,6 @@ namespace TestProject1
             var node = linkedList.GetFirst();
             Assert.AreEqual(node.next.next.data, 4);
         }
-
         [Test]
         public void TestInsertAfter_MultipleElements_ElementsAreAdded()
         {
