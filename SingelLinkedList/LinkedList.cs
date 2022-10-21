@@ -92,14 +92,11 @@ namespace LinkedList
                     _secondNode = _secondNode.next;
                 }
             }
-            if (firstNode == _firstNode.data)
-            {
-                _firstNode.data = _secondNode.data;
-            }
-            else if (secondNode == _secondNode.data)
-            {
-                _secondNode.data = _firstNode.data;
-            }
+
+            _firstNode.data = secondNode;
+            _secondNode.data = firstNode;
+
+
             return _firstNode;
             return _secondNode;
         }

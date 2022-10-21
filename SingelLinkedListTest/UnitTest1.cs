@@ -91,7 +91,7 @@ namespace TestProject1
             linkedList.insertfirst(3);
             var node = linkedList.GetFirst();
             linkedList.SwitchNodes(2, 3);
-            Assert.AreEqual(node.data, 2);
+            Assert.AreEqual(node.next.next.data, 2);
         }
     }
 }
