@@ -12,13 +12,17 @@ namespace LinkedList
         Node lastint = null;
         int count = 0;
 
-        public void addlast(int newNode) 
+        public void insertfirst(int newNode)
+        {
+            head = new Node(newNode, head);
+            count++;
+        }
+        public void insertlast(int newNode) 
         {
             Node currentNode = head;
             if (head == null)
             {
                 head = new Node(newNode, null);
-
             }
             else
             {
@@ -29,6 +33,34 @@ namespace LinkedList
                 currentNode.next = new Node(newNode, null);
             }
             count++;
+        }
+        public void insertafter(Node argData, int newNode)
+        {
+            Node currentNode = head;
+            while (currentNode != argData)
+            {
+                currentNode = currentNode?.next;
+            }
+            currentNode.next = new Node(newNode, currentNode.next);
+        }
+        public void deletelast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("false");
+            }
+            else
+            {
+                if (head != lastint)
+                {
+                    head = head.next;
+                }
+                else
+                {
+                    head = lastint = null;
+                }
+                count--;
+            }
         }
         public Node GetNode(int argData)
         {
@@ -44,48 +76,11 @@ namespace LinkedList
             }
             return currentNode;
         }
-        public void insertafter(Node argData)
-        {
-            Node currentNode = head;
-            while(currentNode != argData)
-            {
-                currentNode = currentNode?.next;
-            }
-            currentNode.next = new Node(newNode, currentNode);
-        }
-
-        public void addfirst(int newNode)
-        {
-            head = new Node(newNode, head);
-            count++;
-        }
-        public void deletelast()
-        {
-            if (head == null)
-            {
-                Console.WriteLine("false");
-            }
-            else
-            {
-                if (head != lastint)
-                {
-                    head = head.next;
-                }
-
-                else
-                {
-                    head = lastint = null;
-                }
-                count--;
-            }
-        }
-        
         public Node GetFirst()
         {
             return head;
         }
         public int size()
         { return count; }
-
     }
 }
