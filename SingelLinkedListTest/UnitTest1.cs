@@ -72,7 +72,7 @@ namespace TestProject1
             Assert.AreEqual(linkedList.GetFirst().next.data, 5);
         }
         [Test]
-        public void TestSwitchNodes_FirstNodeIsSecondNode()
+        public void TestSwitchNodes_FirstNodeIsSecondNode_NodesAreSwitched()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
             linkedList.insertfirst(1);
@@ -83,7 +83,7 @@ namespace TestProject1
             Assert.AreEqual(node.next.data, 3);
         }
         [Test]
-        public void TestSwitchNodes_SecondNodeIsFirstNode()
+        public void TestSwitchNodes_SecondNodeIsFirstNode_NodesAreSwitched()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
             linkedList.insertfirst(1);

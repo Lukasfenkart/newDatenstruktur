@@ -81,13 +81,17 @@ namespace LinkedList
         {
             Node _firstNode = head;
             Node _secondNode = head;
-            while (_firstNode?.data != firstNode & _secondNode?.next.data != secondNode)
+
+            while (_firstNode?.data != firstNode)
             {
                 if (firstNode != _firstNode.data)
                 {
                     _firstNode = _firstNode.next;
                 }
-                else if (secondNode != _secondNode.data)
+            }
+            while (_secondNode?.data != secondNode)
+            { 
+                if (secondNode != _secondNode.data)
                 {
                     _secondNode = _secondNode.next;
                 }
@@ -95,7 +99,6 @@ namespace LinkedList
 
             _firstNode.data = secondNode;
             _secondNode.data = firstNode;
-
 
             return _firstNode;
             return _secondNode;
