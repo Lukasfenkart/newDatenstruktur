@@ -95,7 +95,6 @@ namespace LinkedList
             if (firstNode == _firstNode.data)
             {
                 _firstNode.data = _secondNode.data;
-                
             }
             else if (secondNode == _secondNode.data)
             {
@@ -103,9 +102,7 @@ namespace LinkedList
             }
             return _firstNode;
             return _secondNode;
-            
         }
-
         public Node GetFirst()
         {
             return head;
