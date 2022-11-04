@@ -71,5 +71,27 @@ namespace TestProject1
             linkedList.insertafter(linkedList.GetFirst(), 5);
             Assert.AreEqual(linkedList.GetFirst().next.data, 5);
         }
+        [Test]
+        public void TestSwitchNodes_BothNodesExist_NodesAreSwitched()
+        {
+            LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
+            linkedList.insertfirst(1);
+            linkedList.insertfirst(2);
+            linkedList.insertfirst(3);
+            var node = linkedList.GetFirst();
+            linkedList.SwitchNodes(2, 3);
+            Assert.AreEqual(node.next.data, 3);
+        }
+        [Test]
+        public void TestSwitchNodes_SecondNodeIsFirstNode_NodesAreSwitched()
+        {
+            LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
+            linkedList.insertfirst(1);
+            linkedList.insertfirst(2);
+            linkedList.insertfirst(3);
+            var node = linkedList.GetFirst();
+            linkedList.SwitchNodes(2, 3);
+            Assert.AreEqual(node.next.next.data, 2);
+        }
     }
 }
