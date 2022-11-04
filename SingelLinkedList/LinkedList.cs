@@ -96,12 +96,16 @@ namespace LinkedList
                     _secondNode = _secondNode.next;
                 }
             }
-
             _firstNode.data = secondNode;
             _secondNode.data = firstNode;
 
             return _firstNode;
             return _secondNode;
+
+        }
+        public void Switch(Node firstNode, Node secondNode)
+        {
+            (firstNode.data, secondNode.data) = (secondNode.data, firstNode.data);
         }
         public Node GetFirst()
         {
