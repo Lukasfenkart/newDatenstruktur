@@ -72,7 +72,7 @@ namespace TestProject1
             Assert.AreEqual(linkedList.GetFirst().next.data, 5);
         }
         [Test]
-        public void TestSwitchNodes_FirstNodeIsSecondNode()
+        public void TestSwitchNodes_BothNodesExist_NodesAreSwitched()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
             linkedList.insertfirst(1);

@@ -77,24 +77,29 @@ namespace LinkedList
             }
             return currentNode;
         }
-        public Node SwitchNodes(int firstNode, int secondNode)
+        public Node SwitchNodes(int firstNodeValue, int secondNodeValue)
         {
             Node _firstNode = head;
             Node _secondNode = head;
-            while (_firstNode?.data != firstNode & _secondNode?.next.data != secondNode)
+            while (_firstNode?.data != firstNodeValue)
             {
-                if (firstNode != _firstNode.data)
+                if (firstNodeValue != _firstNode.data)
                 {
                     _firstNode = _firstNode.next;
                 }
-                else if (secondNode != _secondNode.data)
+            
+            }
+
+            while (_secondNode?.next.data != secondNodeValue)
+            {
+                if (secondNodeValue != _secondNode.data)
                 {
                     _secondNode = _secondNode.next;
                 }
             }
 
-            _firstNode.data = secondNode;
-            _secondNode.data = firstNode;
+            _firstNode.data = secondNodeValue;
+            _secondNode.data = firstNodeValue;
 
 
             return _firstNode;
