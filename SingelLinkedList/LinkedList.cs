@@ -81,29 +81,31 @@ namespace LinkedList
         {
             Node _firstNode = head;
             Node _secondNode = head;
-            while (_firstNode?.data != firstNodeValue)
+
+            while (_firstNode?.data != firstNode)
             {
                 if (firstNodeValue != _firstNode.data)
                 {
                     _firstNode = _firstNode.next;
                 }
-            
             }
-
-            while (_secondNode?.next.data != secondNodeValue)
-            {
-                if (secondNodeValue != _secondNode.data)
+            while (_secondNode?.data != secondNode)
+            { 
+                if (secondNode != _secondNode.data)
                 {
                     _secondNode = _secondNode.next;
                 }
             }
-
-            _firstNode.data = secondNodeValue;
-            _secondNode.data = firstNodeValue;
-
+            _firstNode.data = secondNode;
+            _secondNode.data = firstNode;
 
             return _firstNode;
             return _secondNode;
+
+        }
+        public void Switch(Node firstNode, Node secondNode)
+        {
+            (firstNode.data, secondNode.data) = (secondNode.data, firstNode.data);
         }
         public Node GetFirst()
         {
