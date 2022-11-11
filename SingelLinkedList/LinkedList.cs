@@ -101,11 +101,27 @@ namespace LinkedList
 
             return _firstNode;
             return _secondNode;
-
         }
         public void Switch(Node firstNode, Node secondNode)
         {
+            if (!Exists(firstNode) || !Exists(secondNode))
+                return;
             (firstNode.data, secondNode.data) = (secondNode.data, firstNode.data);
+        }
+
+        public bool Exists(Node node)
+        {
+            Node currentNode = head;
+            if (currentNode == node) return true;
+            while (currentNode != null)
+            {
+                if (currentNode == node)
+                {
+                    return true;
+                }
+                currentNode = currentNode.next;
+            }
+            return false;
         }
         public Node GetFirst()
         {
