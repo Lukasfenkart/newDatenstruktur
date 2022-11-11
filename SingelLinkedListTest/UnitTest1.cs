@@ -119,5 +119,35 @@ namespace TestProject1
             Assert.AreEqual(linkedList.GetFirst().next.next.data, 3);
             Assert.AreEqual(linkedList.GetFirst().next.next.next.data, 4);
         }
+        [Test]
+        public void TestinsertionsortReverse_insert4231_expectet4321()
+        {
+            LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
+            linkedList.insertlast(4);
+            linkedList.insertlast(2);
+            linkedList.insertlast(3);
+            linkedList.insertlast(1);
+            linkedList.InsertionSortReverse();
+            Assert.AreEqual(linkedList.GetFirst().data, 4);
+            Assert.AreEqual(linkedList.GetFirst().next.data, 3);
+            Assert.AreEqual(linkedList.GetFirst().next.next.data, 2);
+            Assert.AreEqual(linkedList.GetFirst().next.next.next.data, 1);
+        }
+        [Test]
+        public void TestinsertionsortReverse_insert47135_expectet75431()
+        {
+            LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
+            linkedList.insertlast(4);
+            linkedList.insertlast(7);
+            linkedList.insertlast(1);
+            linkedList.insertlast(3);
+            linkedList.insertlast(5);
+            linkedList.InsertionSortReverse();
+            Assert.AreEqual(linkedList.GetFirst().data, 7);
+            Assert.AreEqual(linkedList.GetFirst().next.data, 5);
+            Assert.AreEqual(linkedList.GetFirst().next.next.data, 4);
+            Assert.AreEqual(linkedList.GetFirst().next.next.next.data, 3);
+            Assert.AreEqual(linkedList.GetFirst().next.next.next.next.data, 1);
+        }
     }
 }
