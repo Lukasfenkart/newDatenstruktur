@@ -123,6 +123,22 @@ namespace LinkedList
             }
             return false;
         }
+        public void InsertionSort()
+        {
+            Node currentNode = head.next;
+            while (currentNode != null)
+            {
+                for (var cur = head; cur != null; cur = cur.next)
+                {
+                    if (cur == currentNode)
+                        break;
+                    if ((int)cur.data < (int)currentNode.data)
+                        continue;
+                    (cur.data, currentNode.data) = (currentNode.data, cur.data);
+                }
+                currentNode = currentNode.next;
+            }
+        }
         public Node GetFirst()
         {
             return head;

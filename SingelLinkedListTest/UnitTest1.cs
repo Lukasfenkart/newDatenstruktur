@@ -71,6 +71,7 @@ namespace TestProject1
             linkedList.insertafter(linkedList.GetFirst(), 5);
             Assert.AreEqual(linkedList.GetFirst().next.data, 5);
         }
+        
         [Test]
         public void TestSwitchNodes_BothNodesExist_NodesAreSwitched()
         {
@@ -86,23 +87,37 @@ namespace TestProject1
         public void TestSwitchNodes_SecondNodeIsFirstNode_NodesAreSwitched()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
-            linkedList.insertfirst(1);
             linkedList.insertfirst(2);
-            linkedList.insertfirst(3);
-            var node = linkedList.GetFirst();
-            linkedList.SwitchNodes(2, 3);
-            Assert.AreEqual(node.next.next.data, 2);
+            linkedList.insertfirst(1);
+            Node node = linkedList.GetFirst();
+            Node node2 = linkedList.GetFirst().next;
+            linkedList.Switch(node, node2);
+            Assert.AreEqual(linkedList.GetFirst().data, 2);
         }
         [Test]
         public void TestSwitchNodesifexits_SecondNodeIsFirstNode_NodesAreSwitched()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
-            linkedList.insertfirst(1);
             linkedList.insertfirst(2);
-            linkedList.insertfirst(3);
-            var node = linkedList.GetFirst();
-            linkedList.SwitchNodes(2, 3);
-            Assert.AreEqual(node.next.next.data, 2);
+            linkedList.insertfirst(1);
+            Node node = linkedList.GetFirst();
+            Node node2 = linkedList.GetFirst().next;
+            linkedList.Switch(node, node2);
+            Assert.AreEqual(linkedList.GetFirst().next.data, 1);
+        }
+        [Test]
+        public void Testinsertionsort_insert4231_expectet1234()
+        {
+            LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
+            linkedList.insertlast(4);
+            linkedList.insertlast(2);
+            linkedList.insertlast(3);
+            linkedList.insertlast(1);
+            linkedList.InsertionSort();
+            Assert.AreEqual(linkedList.GetFirst().data, 1);
+            Assert.AreEqual(linkedList.GetFirst().next.data, 2);
+            Assert.AreEqual(linkedList.GetFirst().next.next.data, 3);
+            Assert.AreEqual(linkedList.GetFirst().next.next.next.data, 4);
         }
     }
 }
