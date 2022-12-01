@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common;
 
 namespace LinkedList
 {
-    public class LinkedList
+    public class LinkedList : IMyList
     {
         Node head = null;
         Node lastint = null;
+        private SortStrategy _strategy;
         int count = 0;
 
         public void insertfirst(int newNode)
@@ -17,7 +19,7 @@ namespace LinkedList
             head = new Node(newNode, head);
             count++;
         }
-        public void insertlast(int newNode) 
+        public void insertlast(int newNode)
         {
             Node currentNode = head;
             if (head == null)
@@ -68,7 +70,7 @@ namespace LinkedList
             Node currentNode = head;
             while (currentNode?.data != argData)
             {
-                if(currentNode == null)
+                if (currentNode == null)
                 {
                     Console.WriteLine("flase");
                     return null;
@@ -77,38 +79,12 @@ namespace LinkedList
             }
             return currentNode;
         }
-        public Node SwitchNodes(int firstNodeValue, int secondNodeValue)
-        {
-            Node _firstNode = head;
-            Node _secondNode = head;
-
-            while (_firstNode?.data != firstNodeValue)
-            {
-                if (firstNodeValue != _firstNode.data)
-                {
-                    _firstNode = _firstNode.next;
-                }
-            }
-            while (_secondNode?.data != secondNodeValue)
-            { 
-                if (secondNodeValue != _secondNode.data)
-                {
-                    _secondNode = _secondNode.next;
-                }
-            }
-            _firstNode.data = secondNodeValue;
-            _secondNode.data = firstNodeValue;
-
-            return _firstNode;
-            return _secondNode;
-        }
         public void Switch(Node firstNode, Node secondNode)
         {
             if (!Exists(firstNode) || !Exists(secondNode))
                 return;
             (firstNode.data, secondNode.data) = (secondNode.data, firstNode.data);
         }
-
         public bool Exists(Node node)
         {
             Node currentNode = head;
@@ -155,11 +131,42 @@ namespace LinkedList
                 currentNode = currentNode.next;
             }
         }
+        public void BubbleSort()
+        {
+            bool sort = true;
+            while (sort)
+            {
+                sort = false;
+                Node currentNode = head;
+                Node currentNodeNext = head.next;
+                while (currentNodeNext != null)
+                {
+                    if (currentNode.data > currentNodeNext.data)
+                    {
+                        (currentNode.data, currentNodeNext.data) = (currentNodeNext.data, currentNode.data);
+                        sort = true;
+                    }
+                    currentNode = currentNode.next;
+                    currentNodeNext = currentNodeNext.next;
+                }
+            }
+        }
+        
+        public int size()
+        { 
+            return count; 
+        }
         public Node GetFirst()
         {
             return head;
         }
-        public int size()
-        { return count; }
+        public void SetSortStrategy(SortStrategy sortStrategy)
+        {
+            _strategy = sortStrategy;
+        }
+        public void Sort()
+        {
+            _strategy.Sort(this);
+        }
     }
 }

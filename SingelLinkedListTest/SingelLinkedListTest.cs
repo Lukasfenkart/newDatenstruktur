@@ -1,5 +1,6 @@
 using LinkedList;
 using NUnit.Framework;
+using Common;
 
 namespace TestProject1
 {
@@ -71,18 +72,6 @@ namespace TestProject1
             linkedList.insertafter(linkedList.GetFirst(), 5);
             Assert.AreEqual(linkedList.GetFirst().next.data, 5);
         }
-        
-        [Test]
-        public void TestSwitchNodes_BothNodesExist_NodesAreSwitched()
-        {
-            LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
-            linkedList.insertfirst(1);
-            linkedList.insertfirst(2);
-            linkedList.insertfirst(3);
-            var node = linkedList.GetFirst();
-            linkedList.SwitchNodes(2, 3);
-            Assert.AreEqual(node.next.data, 3);
-        }
         [Test]
         public void TestSwitchNodes_SecondNodeIsFirstNode_NodesAreSwitched()
         {
@@ -106,7 +95,7 @@ namespace TestProject1
             Assert.AreEqual(linkedList.GetFirst().next.data, 1);
         }
         [Test]
-        public void Testinsertionsort_insert4231_expectet1234()
+        public void TestInsertionSort_Insert4231_Expectet1234()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
             linkedList.insertlast(4);
@@ -120,7 +109,7 @@ namespace TestProject1
             Assert.AreEqual(linkedList.GetFirst().next.next.next.data, 4);
         }
         [Test]
-        public void TestinsertionsortReverse_insert4231_expectet4321()
+        public void TestInsertionSortReverse_insert4231_expectet4321()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
             linkedList.insertlast(4);
@@ -134,7 +123,7 @@ namespace TestProject1
             Assert.AreEqual(linkedList.GetFirst().next.next.next.data, 1);
         }
         [Test]
-        public void TestinsertionsortReverse_insert47135_expectet75431()
+        public void TestInsertionSortReverse_insert47135_expectet75431()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
             linkedList.insertlast(4);
@@ -148,6 +137,22 @@ namespace TestProject1
             Assert.AreEqual(linkedList.GetFirst().next.next.data, 4);
             Assert.AreEqual(linkedList.GetFirst().next.next.next.data, 3);
             Assert.AreEqual(linkedList.GetFirst().next.next.next.next.data, 1);
+        }
+        [Test]
+        public void TestBubbleSort_Insert47135_Expectet13457()
+        {
+            LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
+            linkedList.insertlast(4);
+            linkedList.insertlast(7);
+            linkedList.insertlast(1);
+            linkedList.insertlast(3);
+            linkedList.insertlast(5);
+            linkedList.BubbleSort();
+            Assert.AreEqual(linkedList.GetFirst().data, 1);
+            Assert.AreEqual(linkedList.GetFirst().next.data, 3);
+            Assert.AreEqual(linkedList.GetFirst().next.next.data, 4);
+            Assert.AreEqual(linkedList.GetFirst().next.next.next.data, 5);
+            Assert.AreEqual(linkedList.GetFirst().next.next.next.next.data, 7);
         }
     }
 }
