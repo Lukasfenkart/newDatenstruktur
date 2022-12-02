@@ -5,21 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Common;
 
-namespace MyStack
+namespace Queue
 {
-    public class MyStack
+    public class Queue
     {
         LinkedList.LinkedList internalList = new LinkedList.LinkedList();
-        public Node Push(int newNode)
+        public Node Enqueue(int newNode)
         {
             var nodeToAdd = new Node(newNode, null);
             internalList.insertlast(newNode);
             return nodeToAdd;
         }
-        public Node Pop()
+        public Node Dequeue()
         {
-            var retval = internalList.GetLast();
-            internalList.deletelast();
+            var retval = internalList.GetFirst();
+            internalList.deletefirst();
             return retval;
         }
         public override string ToString()

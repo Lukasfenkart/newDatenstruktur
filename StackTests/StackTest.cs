@@ -18,7 +18,6 @@ namespace StackTests
             stack.Push(3);
             Assert.AreEqual(stack.ToString(), "| 1 | 2 | 3 |");
         }
-
         [Test]
         public void PushAndPop_PushThreeTimesPoPonce_TwoElementsInStackLastOneRemoved()
         {
@@ -30,6 +29,5 @@ namespace StackTests
             Assert.AreEqual(last.data, 3);
             Assert.AreEqual(stack.ToString(), "| 1 | 2 |");
         }
-
     }
 }

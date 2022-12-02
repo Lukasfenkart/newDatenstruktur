@@ -46,6 +46,10 @@ namespace LinkedList
             currentNode.next = new Node(newNode, currentNode.next);
             count++;
         }
+        public void deletefirst()
+        {
+            head = head.next;
+        }
         public void deletelast()
         {
             var cur = head;
