@@ -24,6 +24,11 @@ namespace Common
                 currentNode = currentNode.next;
             }
         }
+
+        public override void SortDesc(IMyList list)
+        {
+            throw new NotImplementedException();
+        }
     }
     public class ReversInsertionSort : SortStrategy
     {
@@ -42,6 +47,11 @@ namespace Common
                 }
                 currentNode = currentNode.next;
             }
+        }
+
+        public override void SortDesc(IMyList list)
+        {
+            throw new NotImplementedException();
         }
     }
 }
