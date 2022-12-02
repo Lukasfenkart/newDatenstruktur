@@ -7,13 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortAlgorythmTest", "SortAl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{A3CC2393-7B0F-4467-90B7-99BA59D9C656}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStack", "MyStack\MyStack.csproj", "{1185C498-B11C-4899-987C-3618969A1665}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyStack", "MyStack\MyStack.csproj", "{1185C498-B11C-4899-987C-3618969A1665}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackTests", "StackTests\StackTests.csproj", "{AC9C2C22-7F36-4706-8561-4C0FC41BD69C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackTests", "StackTests\StackTests.csproj", "{AC9C2C22-7F36-4706-8561-4C0FC41BD69C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleLinkedList", "SingleLinkedList\SingleLinkedList.csproj", "{E119CBD5-EC5D-4C8B-B1F9-614555F591C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleLinkedList", "SingleLinkedList\SingleLinkedList.csproj", "{E119CBD5-EC5D-4C8B-B1F9-614555F591C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleLinkedListTest", "SingleLinkedListTest\SingleLinkedListTest.csproj", "{B9A9239C-1882-4CE0-879A-CC1F3BFAB912}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleLinkedListTest", "SingleLinkedListTest\SingleLinkedListTest.csproj", "{B9A9239C-1882-4CE0-879A-CC1F3BFAB912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{7C53557D-E9E7-4D11-958F-30586562C8A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueTest", "QueueTest\QueueTest.csproj", "{471439E0-F7EC-459D-B448-258D0C47D947}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{B9A9239C-1882-4CE0-879A-CC1F3BFAB912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9A9239C-1882-4CE0-879A-CC1F3BFAB912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9A9239C-1882-4CE0-879A-CC1F3BFAB912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C53557D-E9E7-4D11-958F-30586562C8A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C53557D-E9E7-4D11-958F-30586562C8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C53557D-E9E7-4D11-958F-30586562C8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C53557D-E9E7-4D11-958F-30586562C8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{471439E0-F7EC-459D-B448-258D0C47D947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471439E0-F7EC-459D-B448-258D0C47D947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471439E0-F7EC-459D-B448-258D0C47D947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471439E0-F7EC-459D-B448-258D0C47D947}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
