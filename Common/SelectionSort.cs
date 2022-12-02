@@ -26,5 +26,10 @@ namespace Common
                 current = current.next;
             }
         }
+
+        public override void SortDesc(IMyList list)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
