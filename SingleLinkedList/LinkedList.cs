@@ -145,7 +145,6 @@ namespace LinkedList
                 }
             }
         }
-        
         public int size()
         { 
             return count; 
@@ -157,10 +156,6 @@ namespace LinkedList
         public void SetSortStrategy(SortStrategy sortStrategy)
         {
             _strategy = sortStrategy;
-        }
-        public void Sort()
-        {
-            _strategy.Sort(this);
         }
         public Node GetLast()
         {
@@ -185,6 +180,14 @@ namespace LinkedList
             }
             retval += "|";
             return retval;
+        }
+        public void Sort()
+        {
+            _strategy.Sort(this);
+        }
+        public void SortDesc()
+        {
+            _strategy.SortDesc(this);
         }
     }
 }
