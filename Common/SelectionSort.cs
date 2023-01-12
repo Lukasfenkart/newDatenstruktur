@@ -10,7 +10,6 @@ namespace Common
     {
         public override void Sort(IMyList list)
         {
-
             var current = list.GetFirst();
 
             while (current.next != null)
@@ -26,7 +25,6 @@ namespace Common
                 current = current.next;
             }
         }
-
         public override void SortDesc(IMyList list)
         {
             throw new NotImplementedException();
