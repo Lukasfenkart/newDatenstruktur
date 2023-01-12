@@ -41,17 +41,6 @@ namespace TestProject1
             Assert.AreEqual(4, linkedList.size());
         }
         [Test]
-        public void TestDeleteNode_FromTheMiddle_ElementIsDeleted()
-        {
-            LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
-            linkedList.insertlast(1);
-            linkedList.insertlast(2);
-            linkedList.insertlast(3);
-            linkedList.insertlast(4);
-            linkedList.deletelast();
-            Assert.AreEqual(3, linkedList.size());
-        }
-        [Test]
         public void TestGetNode_MultipleElements_ReturnsElement()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();

@@ -14,5 +14,4 @@ namespace Common
             void Sort();
             void SortDesc();
         }
-
-    }
+}
