@@ -8,7 +8,7 @@ namespace Quicksort
 {
     public class Quicksort
     {
-        private static void Quick_Sort(int[] arr, int left, int right)
+        public static void Quick_Sort(int[] arr, int left, int right)
         {
             if (left < right)
             {

@@ -13,8 +13,8 @@ namespace QuickSortTest
         [Test]
         public void TestQuickSort_Add3Ints_ListIsSortedCorrect()
         {
-            int[] arr = new int[] { 2, 5, -4, 11, 0, 18, 22, 67, 51, 6 };
-            Quicksort.Quicksort Quick_Sort(arr, 0, arr.Length - 1);
+            int[] arr = new int[] { 15, 6, 23, -11, 2, 8, -22, 43, 31, 9 };
+            Quicksort.Quicksort.Quick_Sort(arr, 0, arr.Length - 1);
             Assert.AreEqual(-4, arr[0]);
         }
     }
