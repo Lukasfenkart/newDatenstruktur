@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Quicksort;
 
 namespace QuickSortTest
 {
@@ -10,9 +11,11 @@ namespace QuickSortTest
         }
 
         [Test]
-        public void Test1()
+        public void TestQuickSort_Add3Ints_ListIsSortedCorrect()
         {
-            Assert.Pass();
+            int[] arr = new int[] { 2, 5, -4, 11, 0, 18, 22, 67, 51, 6 };
+            Quicksort.Quicksort Quick_Sort(arr, 0, arr.Length - 1);
+            Assert.AreEqual(-4, arr[0]);
         }
     }
 }
