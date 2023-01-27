@@ -3,7 +3,7 @@ using Common;
 
 namespace SortAlgorythmTest
 {
-    public class Test
+    public class BubbleSortTest
     {
         [SetUp]
         public void Setup()

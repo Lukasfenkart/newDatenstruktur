@@ -3,7 +3,7 @@ using Common;
 
 namespace SortAlgorythmTest
 {
-    public class Tests
+    public class InsertionSortTest
     {
         [SetUp]
         public void Setup()
