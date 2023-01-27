@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    public class SelectionSort : SortStrategy
+    public class Sort_SelectionSort : SortStrategy
     {
         public override void Sort(IMyList list)
         {

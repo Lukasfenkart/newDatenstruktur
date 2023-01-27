@@ -13,7 +13,7 @@ namespace SortAlgorythmTest
         public void TestStrategyPattern_BubbleSort_Insert1856_Expectet1568()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
-            linkedList.SetSortStrategy(new BubbleSort());
+            linkedList.SetSortStrategy(new Sort_BubbleSort());
             linkedList.insertlast(1);
             linkedList.insertlast(8);
             linkedList.insertlast(5);
@@ -28,7 +28,7 @@ namespace SortAlgorythmTest
         public void TestStrategyPattern_BubbleSort_InsertNum1_ExpectetNoExeption()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
-            linkedList.SetSortStrategy(new BubbleSort());
+            linkedList.SetSortStrategy(new Sort_BubbleSort());
             linkedList.insertlast(1);
             linkedList.Sort();
             Assert.AreEqual(linkedList.GetFirst().data, 1);

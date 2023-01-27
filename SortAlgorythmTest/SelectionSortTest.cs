@@ -21,7 +21,7 @@ namespace SortAlgorythmTest
             linkedList.insertfirst(3);
             linkedList.insertfirst(1);
             linkedList.insertlast(2);
-            linkedList.SetSortStrategy(new SelectionSort());
+            linkedList.SetSortStrategy(new Sort_SelectionSort());
             linkedList.Sort();
             Assert.AreEqual(linkedList.ToString(), "| 3 | 2 | 1 |");
         }
@@ -36,7 +36,7 @@ namespace SortAlgorythmTest
             linkedList.insertfirst(7);
             linkedList.insertfirst(5);
             linkedList.insertlast(2);
-            linkedList.SetSortStrategy(new SelectionSort());
+            linkedList.SetSortStrategy(new Sort_SelectionSort());
             linkedList.Sort();
             Assert.AreEqual(linkedList.ToString(), "| 7 | 6 | 5 | 4 | 3 | 2 | 1 |");
         }

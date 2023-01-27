@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    public class InsertionSort : SortStrategy
+    public class Sort_InsertionSort : SortStrategy
     {
         public override void Sort(IMyList list)
         {

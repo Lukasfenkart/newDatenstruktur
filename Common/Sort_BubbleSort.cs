@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    public class BubbleSort : SortStrategy
+    public class Sort_BubbleSort : SortStrategy
     {
         public override void Sort(IMyList list)
         {

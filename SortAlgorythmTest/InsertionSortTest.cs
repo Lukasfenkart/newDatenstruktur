@@ -13,7 +13,7 @@ namespace SortAlgorythmTest
         public void TestStrategyPattern_Insertionsort_Insert1856_Expectet1568()
         {
             LinkedList.LinkedList linkedList = new LinkedList.LinkedList();
-            linkedList.SetSortStrategy(new InsertionSort());
+            linkedList.SetSortStrategy(new Sort_InsertionSort());
             linkedList.insertlast(1);
             linkedList.insertlast(8);
             linkedList.insertlast(5);
