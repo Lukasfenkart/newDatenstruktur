@@ -9,14 +9,14 @@ while (true)
     if(lastlog < DateTime.Now)
     {
         
-        if(counter == 1 || counter == 7 || counter == 9)
+        if(counter == 3 || counter == 7 || counter == 5)
         {
             var result = $"ein VW Polo wurde produziert um {DateTime.Now}";
             var logger = Loggerfactory.CreateLogger(LoggerType.Console);
             Log(result, logger);
             lastlog = DateTime.Now.AddSeconds(0.5);
         }
-        else if (counter == 2 || counter == 3 || counter == 5)
+        else if (counter == 1 || counter == 2 || counter == 9)
         {
             var result = $"ein Porsche 911 wurde produziert um {DateTime.Now}";
             var logger = Loggerfactory.CreateLogger(LoggerType.Console);
@@ -40,5 +40,4 @@ while (true)
 void Log(string result, ILogger logger)
 {
     logger.Log(result);
-    
 }
