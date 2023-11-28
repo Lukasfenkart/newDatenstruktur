@@ -11,15 +11,15 @@ namespace MyStack
         public static void Main()
         {
             Console.Write("Geben Sie ein Wort ein: ");
-            string input = Console.ReadLine();
+            string eingabe = Console.ReadLine();
 
-            if (IsPalindrome(input))
+            if (IsPalindrome(eingabe))
             {
-                Console.WriteLine($"{input} ist ein Palindrom.");
+                Console.WriteLine($"{eingabe} ist ein Palindrom.");
             }
             else
             {
-                Console.WriteLine($"{input} ist kein Palindrom.");
+                Console.WriteLine($"{eingabe} ist kein Palindrom.");
             }
         }
 
@@ -37,7 +37,7 @@ namespace MyStack
                 stack.Push(eingabe[i]);
             }
 
-            int startIndex = (laenge % 2 == 0) ? halbelaenge : halbelaenge + 1;
+             int startIndex = (laenge % 2 == 0) ? halbelaenge : halbelaenge + 1;
 
             for (int i = startIndex; i < laenge; i++)
             {
