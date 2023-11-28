@@ -26,6 +26,5 @@ namespace MyStack
         {
             return internalList.ToString();
         }
-        public 
     }
 }

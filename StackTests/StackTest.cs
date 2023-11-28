@@ -29,5 +29,17 @@ namespace StackTests
             Assert.AreEqual(last.data, 3);
             Assert.AreEqual(stack.ToString(), "| 1 | 2 |");
         }
+        [Test]
+        public void CheckthePalnindrom()
+        {
+            MyStack.Palindrom palindrom = new MyStack.Palindrom();
+            palindrom("Anna");
+            palindrom()
+            public void TestIsPalindrome(string word, bool expected)
+            {
+                bool result = palindrom.IsPalindrome(word);
+                Assert.AreEqual(expected, result);
+            }
+        }
     }
 }
